@@ -1,0 +1,36 @@
+body {
+  font-family:Arial,Helvetica,Sans-Serif;
+  color: #666;
+}
+
+h1 {
+  color: red;
+}
+
+.formtitle{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.formrow {
+  clear: both;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.search_input{
+  float: left;
+}
+
+.search_label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.search_select {
+  width: 250px;
+  font-size: 14px;
+}
+
+
+

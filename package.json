@@ -1,0 +1,15 @@
+{
+  "name": "twitter",
+  "version": "1.0.0",
+  "description": "twitter feeds",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alina Staicu",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.8.0",
+    "gulp": "^3.9.0"
+  }
+}
