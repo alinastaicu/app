@@ -32,5 +32,9 @@ h1 {
   font-size: 14px;
 }
 
+.hide {
+  display: none;
+}
+
 
 

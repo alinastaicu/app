@@ -2,7 +2,6 @@
 	<head>
 		<title>Twitter feeds</title>
     <link rel="stylesheet" href="/static/main.css"/>
-		<script type="text/javascript" src="/static/main.js"></script>
 	</head>
 	<body>
 		<div>
@@ -25,7 +24,7 @@
       </div>
       <div class="formrow">
         <label class="search_label" for="rent">Vermietung</label>
-        <input class="search_input" type="checkbox" id="rent">
+        <input id="rent_checkbox" class="search_input" type="checkbox" id="rent">
       </div>
       <div class="formrow">
         <label class="search_label" for="rent">Wen mochten Sie versichern?</label>
@@ -34,9 +33,43 @@
           <option value="1">Single</option>
           <option value="2">Single mit Kind</option>
           <option value="3">Paar</option>
-          <option value="4">Familie</option>
+          <option value="4" selected>Familie</option>
         </select>
       </div>
+
+      <div id="rent_options" class="hide">
+        <div class="formrow">
+          <label class="search_label" for="rent">Vermitete Wochnenhalten?</label>
+          <div></div>
+          <select class="search_select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+
+          </select>
+        </div>
+
+        <div class="formrow">
+          <label class="search_label" for="rent">Summe Bruttojahresmieteinahmen?</label>
+          <div></div>
+          <select class="search_select">
+            <option value="3000">0 - 3000</option>
+            <option value="6000" selected>3000 - 6000</option>
+            <option value="9000">6000 - 9000</option>
+            <option value="12000">9000 - 12000</option>
+            <option value="15000">12000 - 15000</option>
+            <option value="18000">15000 - 18000</option>
+          </select>
+        </div>
+      </div>
+
       <div class="formrow">
         <label class="search_label" for="rent">Ihr beruflicher Status?</label>
         <div></div>
@@ -62,5 +95,8 @@
         </select>
       </div>
     </div>
+
+
+    <script type="text/javascript" src="/static/main.js"></script>
 	</body>
 </html>
