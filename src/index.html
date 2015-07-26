@@ -2,21 +2,23 @@
 	<head>
 		<title>Twitter feeds</title>
     <link rel="stylesheet" href="/static/main.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js'></script>
 	</head>
 	<body>
 		<div>
       <p class="formtitle">Welche Bereiche wollen Sie versicheren?</p>
       <div class="formrow">
         <label class="search_label" for="privat">Privat</label>
-        <input class="search_input" type="checkbox" id="privat">
+        <input checked class="search_input" type="checkbox" id="privat">
       </div>
       <div class="formrow">
         <label class="search_label" for="job">Beruf</label>
-        <input class="search_input" type="checkbox" id="job">
+        <input checked class="search_input" type="checkbox" id="job">
       </div>
       <div class="formrow">
         <label class="search_label" for="transport">Verkehr</label>
-        <input class="search_input" type="checkbox" id="transport">
+        <input checked class="search_input" type="checkbox" id="transport">
       </div>
       <div class="formrow">
         <label class="search_label" for="home">Wohnen</label>
@@ -24,24 +26,14 @@
       </div>
       <div class="formrow">
         <label class="search_label" for="rent">Vermietung</label>
-        <input id="rent_checkbox" class="search_input" type="checkbox" id="rent">
-      </div>
-      <div class="formrow">
-        <label class="search_label" for="rent">Wen mochten Sie versichern?</label>
-        <div></div>
-        <select class="search_select">
-          <option value="1">Single</option>
-          <option value="2">Single mit Kind</option>
-          <option value="3">Paar</option>
-          <option value="4" selected>Familie</option>
-        </select>
+        <input class="search_input" type="checkbox" id="rent">
       </div>
 
       <div id="rent_options" class="hide">
         <div class="formrow">
           <label class="search_label" for="rent">Vermitete Wochnenhalten?</label>
           <div></div>
-          <select class="search_select">
+          <select id="rent_no_properties" class="search_select">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -59,7 +51,7 @@
         <div class="formrow">
           <label class="search_label" for="rent">Summe Bruttojahresmieteinahmen?</label>
           <div></div>
-          <select class="search_select">
+          <select id="rent_income" class="search_select">
             <option value="3000">0 - 3000</option>
             <option value="6000" selected>3000 - 6000</option>
             <option value="9000">6000 - 9000</option>
@@ -71,9 +63,20 @@
       </div>
 
       <div class="formrow">
+        <label class="search_label" for="rent">Wen mochten Sie versichern?</label>
+        <div></div>
+        <select id="marital_status" class="search_select">
+          <option value="1">Single</option>
+          <option value="2">Single mit Kind</option>
+          <option value="3">Paar</option>
+          <option value="4" selected>Familie</option>
+        </select>
+      </div>
+
+      <div class="formrow">
         <label class="search_label" for="rent">Ihr beruflicher Status?</label>
         <div></div>
-        <select class="search_select">
+        <select id="job_type" class="search_select">
           <option value="1">Arbeinehmen</option>
           <option value="5">Selbststandig</option>
           <option value="3">Offentlicher Dienst</option>
@@ -82,10 +85,11 @@
           <option value="2">Ohne berufliche Tatigkeit</option>
         </select>
       </div>
-      <div class="formrow">
+
+      <div id="profession_partener" class="formrow">
         <label class="search_label" for="rent">Beruflicher Status Ihres Parteners?</label>
         <div></div>
-        <select class="search_select">
+        <select id="job_type_partener" class="search_select">
           <option value="1">Arbeinehmen</option>
           <option value="5">Selbststandig</option>
           <option value="3">Offentlicher Dienst</option>
@@ -96,6 +100,10 @@
       </div>
     </div>
 
+    <div>
+      <button id="compare" class="action_button" type="button">Vergliechen</button>
+
+    </div>
 
     <script type="text/javascript" src="/static/main.js"></script>
 	</body>
