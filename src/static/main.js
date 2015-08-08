@@ -14,15 +14,15 @@ var buttoneCompare = document.querySelector('#compare');
 
 
 rentCheckbox.addEventListener('change', function() {
-  if(rentCheckbox.checked){
+  if (rentCheckbox.checked) {
     rentOptionsDiv.classList.remove('hide');
-  } else{
+  } else {
     rentOptionsDiv.classList.add('hide');
   }
 });
 
-maritalStatusSelect.addEventListener('change', function(){
-  if (maritalStatusSelect.value == '1' || maritalStatusSelect.value =='2') {
+maritalStatusSelect.addEventListener('change', function() {
+  if (maritalStatusSelect.value == '1' || maritalStatusSelect.value == '2') {
     professionPartenerDiv.classList.add('hide');
   } else {
     professionPartenerDiv.classList.remove('hide');
@@ -57,11 +57,24 @@ buttoneCompare.addEventListener('click', function() {
   var ajaxParam = {
     url: url,
   };
-  $.ajax(ajaxParam).done(function (data) {
+  $.ajax(ajaxParam).done(function(data) {
     debugger;
-  }).fail(function (data) {
+  }).fail(function(data) {
     debugger;
   });
 
 });
 
+function getData(param) {
+  var para = document.createElement('div');
+  var t = document.createTextNode(param.firstName + ' ' + param.lastName);
+  para.appendChild(t)
+  return para;
+}
+
+var pip = {
+  firstName: 'John',
+  lastName: 'Doe'
+};
+
+document.querySelector('body').appendChild(getData(pip));
