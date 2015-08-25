@@ -1,16 +1,26 @@
-function fizzbuzz (name){
-  if (name == 1) {
-    return 1;
+function fizzbuzz(nr) {
+  if(isFizz(nr) && isBuzz(nr)) {
+    return fizz() + buzz();
+  } else if(isFizz(nr)) {
+    return fizz();
+  } else if (isBuzz(nr)) {
+    return buzz();
   }
-  else if(name % 3 == 0 && name % 5 == 0) {
-    return 'fizzbuzz';
-  }
-  else if (name % 3 == 0) {
-    return 'fizz';
-  }
-  else if(name % 5 == 0) {
-    return 'buzz';
-  }else{
-    return name;
-  }
+  return nr;
+}
+
+function isFizz(nr) {
+  return nr % 3 == 0;
+}
+
+function isBuzz(nr) {
+  return nr % 5 == 0;
+}
+
+function fizz() {
+  return 'fizz';
+}
+
+function buzz() {
+  return 'buzz';
 }
