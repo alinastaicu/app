@@ -11,7 +11,20 @@
      eg: [1, 2, 3, 4] returns [1, 4, 9, 16]
   - arrayInvers(array) - imi intoarce elementele din array in ordine inversa
     eg: [1, 2, 3, 4] returns [4, 3, 2, 1]
+  - fibonacci(max)
+    eg: fibonacci(6) returns [1,1,2,3,5,8]
+    eg: fibonacci(10) returns [1,1,2,3,5,8,13,21,34,55]
 */
+
+function fibonaci(max){
+  var array = [1,1];
+  for (var i = 2; i < max; i= i + 1 ) {
+    array[i] = array[i-2] + array[i-1];
+  };
+  return array;
+}
+
+
 
 
 function arraySuma(array){

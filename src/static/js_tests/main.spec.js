@@ -1,3 +1,42 @@
+
+describe('cand fibonaci este 6', function() {
+  it ('fibonaci intoarce [1,1,2,3,5,8]',function(){
+    expect(fibonaci(6)).toEqual([1,1,2,3,5,8]);
+  });
+});
+
+
+describe('cand fibonaci este 10', function() {
+  it ('fibonaci intoarce [1,1,2,3,5,8,13,21,34,55]',function(){
+    expect(fibonaci(10)).toEqual([1,1,2,3,5,8,13,21,34,55]);
+  });
+});
+
+describe('cand fibonaci este 4', function() {
+  it ('suma fibonaci intoarce 7',function(){
+    expect(sumaFibonaci(4)).toEqual(7);
+  });
+});
+
+describe('cand fibonaci este 5', function() {
+  it ('suma fibonaci intoarce 12',function(){
+    expect(sumaFibonaci(5)).toEqual(12);
+  });
+});
+
+describe('cand fibonaci este 4', function() {
+  it ('suma patratelor fibonaci intoarce 15',function(){
+    expect(sumaPatratelorFibonaci(4)).toEqual(15);
+  });
+});
+
+describe('cand fibonaci este 5', function() {
+  it ('suma fibonaci intoarce 40',function(){
+    expect(sumaPatratelorFibonaci(5)).toEqual(40);
+  });
+});
+
+
 describe('Adevarat este adevarat', function() {
   it('should be true', function() {
     expect(true).toEqual(true);
