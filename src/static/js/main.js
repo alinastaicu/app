@@ -15,6 +15,18 @@
     eg: fibonacci(6) returns [1,1,2,3,5,8]
     eg: fibonacci(10) returns [1,1,2,3,5,8,13,21,34,55]
 */
+function sumaFibonaci(max){
+  var sirFibonacci = fibonaci(max);
+  var suma = arraySuma(sirFibonacci);
+  return suma;
+}
+
+function sumaPatratelorFibonaci(max) {
+  var sirFibonacci = fibonaci(max);
+  var patrat = arrayLaPuterea2(sirFibonacci);
+  var sumele = arraySuma(patrat);
+  return sumele;
+}
 
 function fibonaci(max){
   var array = [1,1];
@@ -31,9 +43,9 @@ function arraySuma(array){
   var suma = 0;
   for (var i = 0; i < array.length; i++) {
     suma = array[i] + suma
-    }
-    return suma;
   }
+  return suma;
+}
 
 
 function arrayLaPuterea2(array){
