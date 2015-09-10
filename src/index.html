@@ -1,11 +1,23 @@
 <html>
 	<head>
 		<title>Twitter feeds</title>
-    <link rel="stylesheet" href="/static/main.css"/>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js"></script>
-    <script type="text/javascript" src="/static/js/main.js"></script>
+
+    <!-- build:css -->
+    <link rel="stylesheet" href="/index.css">
+    <!-- endbuild -->
+
+    <!-- build:js -->
+    <script src="/jspm_packages/system.js"></script>
+    <script src="/config.js"></script>
+    <script>
+      System.import('polyfills').then(function () {
+        System.import('app');
+      });
+    </script>
+    <!-- endbuild -->
   </head>
   <body>
 

@@ -1,21 +1,30 @@
-module.exports = function(config) {
+'use strict';
 
-  var configSettings = {
-    basePath: './src/static',
-    frameworks: ['jasmine'],
+module.exports = function (config) {
+
+  config.set({
+    basePath: 'src',
+    frameworks: ['jspm', 'jasmine', 'phantomjs-shim'],
+    jspm: {
+      config: 'config.js',
+      serveFiles: ['**/*'],
+      loadFiles: ['polyfills.js', '**/*.spec.js']
+    },
+    exclude: [],
+    preprocessors: {},
     reporters: ['spec'],
-    files: [
-      'js/**/*.js',
-      'js_tests/**/*.js'
-    ],
+    specReporter: {
+      suppressPassed: true,
+      suppressFailed: false,
+      suppressSkipped: false
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
+    autoWatch: true,
     browsers: ['PhantomJS'],
-    autoWatch: false,
-    singleRun: true,
+    singleRun: false,
     browserNoActivityTimeout: 25000
-  };
+  });
 
-  config.set(configSettings);
 };

@@ -1,2 +1,7 @@
-node_modules/
+node_modules
+jspm_packages
 npm-debug.log
+.tmp
+tmp
+.dist
+dist
