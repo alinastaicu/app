@@ -8,7 +8,7 @@ module.exports = function (config) {
     jspm: {
       config: 'config.js',
       serveFiles: ['**/*'],
-      loadFiles: ['polyfills.js', '**/*.spec.js']
+      loadFiles: ['polyfills.js', 'static/**/*.js','static/**/*.spec.js']
     },
     exclude: [],
     preprocessors: {},
